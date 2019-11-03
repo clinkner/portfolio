@@ -1,0 +1,480 @@
+.container{
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: 500px auto auto auto auto;
+	width: 100vw;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+	background-color: white;
+	padding: 20px;
+	font-family: "Lora";
+}
+
+p{
+	font-family: "Lora";
+	size: 20px;
+	padding: 20px;
+	line-height: 1.5;
+}
+
+h1 {
+	text-align: center;
+}
+
+.skip a{
+	background: white;
+	left: 0;
+	padding: 6px;
+	position: absolute; 
+	top: -40px;   
+	-webkit-transition: top 1s ease-out;
+	transition: top 1s ease-out;
+	z-index: 1;
+}
+
+.skip a:focus {
+  top: 0px;
+}
+
+
+:focus {
+  border: 2px solid black;
+/*Add the selector and code to put a 2px black border around all elements in focus.*/
+}
+
+nav li{
+  display: inline;
+  padding-right: 20px;
+}
+
+nav a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-transform: uppercase;
+  background: -webkit-linear-gradient(red, orange, yellow, green, blue, purple);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+}
+
+.nav{
+	grid-row: 1  / -1;
+	text-align: right; 
+	vertical-align: middle;
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	font-family: "Lora";
+	background-color: black;
+	width: 100%;
+}
+
+header{
+	grid-row: 2 / span 1;
+	color: black;
+	text-align: center;
+	align-self: center;
+	text-shadow: 5;
+}
+
+
+#members{
+	grid-column: 1 / -1;
+}
+
+.band-members h2{
+	text-align: center;
+}
+
+
+/* css inspired by W3 Schools */
+
+#fun{
+	grid-column: 1 / -1;
+	padding: 15px;
+	margin: 15px;
+}
+
+#fun p{
+	color: gray;
+}
+
+#fun h1{
+	padding-bottom: 50px;
+}
+
+
+/*Code inspired by W3schools*/
+
+#albums{
+
+	padding: 15px;
+	margin: 15px;
+}
+* {
+  box-sizing: border-box;
+}
+
+#albums p {
+	text-align: center;
+}
+
+
+h1 {
+  font-size: 50px;
+  word-break: break-all;
+  font-family: 'Montserrat';
+}
+
+h2 {
+	font-family: 'Montserrat';
+	font-weight: 900;
+	font-size: 30px;
+	padding-top: 20px;
+}
+
+h3 {
+	font-family: 'Montserrat';
+	font-weight: bold;
+}
+
+.row {
+  margin: 8px -16px;
+}
+
+
+.row,
+.row > .gallery {
+  padding: 8px;
+}
+
+.gallery {
+	grid-column: 1 / -1;
+	float: left;
+	width: 50%;
+	overflow: hidden;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.content {
+  background-color: white;
+  padding: 10px;
+}
+
+/*contact CSS done underneath here*/
+
+.form {
+	font-family: 'Lora'
+    text-align: center;  
+    width: 45%; 
+    height: 400px;
+    margin: 30px auto 0 auto;
+}
+
+.name { 
+	font-family: 'Lora';
+	text-align: center;
+    color: black;
+    width:300px;
+    border-radius: .5em;
+  }
+
+.name:hover{
+	border-radius: .5em;
+    background-color: red;
+    height:50px;
+    width:400px;
+  }
+
+.email {
+	border-radius: .5em;
+	font-family: "Lora";
+	text-align: center;
+	background-color: white;  
+	width:300px;
+    
+  }
+
+.email:hover{
+	background-color: orange;  
+	height:50px;
+	width:380px;
+   
+  }
+  .message { 
+  	border-radius: .5em;
+    font-family: "Lora";
+    text-align: center;
+    background-color: white;
+    width:300px;
+    height: 150px;
+  }
+
+  .message:hover{
+    background-color: yellow;
+    height: 200px;
+    width:370px;
+  }
+
+  .entry{
+  	border-radius: .5em;
+    display: block;
+    margin: 30px auto;
+    padding: 10px;
+    border-style: solid;
+    border-width: .25em; 
+  }
+
+.submit{
+	border-radius: .5em;
+	font-family: "Lora";
+	font-size: 1em;
+	padding:10px;
+	text-transform: uppercase;
+	width: 200px;
+	color: white;
+	background-color: black;  
+	border: none;
+
+  }
+.submit:hover{
+	background-image: linear-gradient(to bottom right, red, orange, yellow, green);
+	color: black;
+	border: none;
+}
+
+.contact {
+	margin-left: 15%;
+	margin-right: 15%;
+	width: 70%;
+	grid-row-start: 1;
+}
+
+img{
+	width: 100%;
+}
+
+footer{
+	grid-column: 1 / -1;
+	background-color: black;
+	color: white;
+	padding-top: 30px;
+	text-align: center;
+	overflow: hidden;
+}
+
+@media only screen and (min-width: 660px){
+	.container{
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto;
+}
+
+nav li{
+  display: inline;
+  padding-right: 20px;
+}
+
+nav a{
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+nav a:hover{
+  text-decoration: underline;
+}
+
+.nav{
+	grid-row: 1  / -1;
+	text-align: right; 
+	vertical-align: middle;
+	position: fixed;
+	overflow: hidden;
+	top: 0;
+	font-family: "Lora";
+	background-color: black;
+	width: 100%;
+}
+
+#about{
+	grid-column: 2 / span 1;
+}
+
+.header{
+	grid-column: 2 / 3;
+	top: 0;
+}
+
+
+.flip-card {
+	justify-content: center;
+	padding-left: 70px;
+	background-color: transparent;
+	width: 500px;
+	height: 400px;
+	perspective: 1000px;
+}
+
+.flip-card-inner {
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card h1 {
+	font-size: 30px;
+	padding: 15px;
+}
+
+.flip-card p {
+	text-align: left;
+}
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+  max-width: 500px;
+  max-height: 400px;
+  backface-visibility: hidden;
+}
+
+.flip-card-front {
+  color: black;
+}
+
+.flip-card-back {
+  background-color: black;
+  color: white;
+  transform: rotateY(180deg);
+}
+
+.gallery {
+	grid-column: 1 / -1;
+	float: left;
+	width: 33%;
+	overflow: hidden;
+}
+
+
+
+#about{
+	grid-column: 2 / span 2;
+	grid-row: 3 / span 1;
+	max-height: 700px;
+	overflow: hidden;
+}
+
+}
+
+
+
+@media only screen and (min-width: 1200px){
+	.container{
+		display: grid;
+		grid-template-columns: 1fr 1fr 1fr 1fr;
+		grid-row: auto;
+}
+
+header {
+	background-attachment: fixed;
+	background-image: url("../images/beatles.jpg");
+	background-position: center; 
+	background-repeat: no-repeat; 
+	background-size: cover;
+	color: red;
+	height: 700px;   
+	font-family: 'Montserrat', sans-serif;
+	grid-column: 1 / span 4;
+	grid-row: 2 / -1;
+
+}
+
+.hit-the-floor {
+	color: #fff;
+	font-size: 12em;
+	font-weight: bold;
+	font-family: 'Montserrat';
+	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
+}
+
+.hit-the-floor {
+  text-align: center;
+}
+
+.gallery {
+	width: 25%;
+	overflow: hidden;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Abril+Fatface');
+
+ol {
+  list-style: none;
+  counter-reset: my-awesome-counter;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0;
+  padding: 0;
+}
+ol li {
+  counter-increment: my-awesome-counter;
+  display: flex;
+  width: 50%;
+  font-size: 1rem;
+  margin-bottom: 2rem;
+  padding: 30px;
+  line-height: 1.5;
+}
+ol li::before {
+  content: "0" counter(my-awesome-counter);
+  font-weight: bold;
+  font-size: 3rem;
+  margin-right: 1rem;
+  font-family: 'Abril Fatface', serif;
+  line-height: 2;
+}
+
+
+.john{
+	grid-column: 1 / span 2;
+	grid-row: 6 / span 1;
+
+}
+
+.paul{
+	grid-column: 1 / span 2;
+	grid-row: 7 / span 1;
+
+}
+
+.george{
+	grid-column: 3 / span 2;
+	grid-row: 6 / span 1;
+
+}
+
+.ringo{
+	grid-column: 3 / span 2;
+	grid-row: 7 / span 1;
+}
+
+}
