@@ -3,8 +3,9 @@
 	display: grid;
 	grid-template-columns: 1fr;
 	grid-template-rows: auto auto auto auto auto;
-	width: 100vw;
 }
+
+@keyframes tracking-in-expand{0%{letter-spacing:-.5em;opacity:0}40%{opacity:.6}100%{opacity:1}}
 /*done*/
 
 /*nav*/
@@ -15,7 +16,6 @@
 }
 body {
 	font-family: 'Montserrat', sans-serif;
-	line-height: 1.6;
 	margin: 0;
 	min-height: 100vh;
 }
@@ -29,8 +29,6 @@ ul {
 a {
 	text-decoration: none;
 }
-
-
 
 .logo {
 	margin: 0;
@@ -56,12 +54,14 @@ a {
 }
 
 .main-nav a:hover {
-	color: white;
-	background: -webkit-linear-gradient(red, orange, yellow);
+	color: orange;
+/*	background: -webkit-linear-gradient(red, yellow, blue);
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	font-weight: bold;
+	font-weight: bold;*/
 }
+
+/*inpisred from https://codepen.io/samnorton/pen/zBYMJG*/
 
 
 
@@ -95,7 +95,7 @@ p{
 
 h1 {
 	text-align: center;
-	padding-top: 20px;
+	padding-top: 40px;
 	font-size: 50px;
 	word-break: break-all;
 	font-family: 'Montserrat';
@@ -106,12 +106,18 @@ h2 {
 	font-weight: 900;
 	font-size: 30px;
 	padding-top: 20px;
+	animation-name: tracking-in-expand;
+	animation-duration: 1.4s;
 }
 
 h3 {
 	font-family: 'Montserrat';
 	font-weight: bold;
 }
+
+/*.parallax{
+	word-wrap: unset;
+}*/
 
 .band-members h2{
 	text-align: center;
@@ -125,6 +131,7 @@ h3 {
 	padding-bottom: 50px;
 	text-align: right;
 }
+
 
 #albums{
 	padding: 15px;
@@ -159,12 +166,15 @@ img{
 
 /*contact CSS done underneath here*/
 
+
 .form {
 	font-family: 'Lora'
     text-align: center;  
     width: 45%; 
     height: 400px;
-    margin: 30px auto 0 auto;
+    margin: auto;
+    margin-bottom: 65px;
+    margin-top: 65px;
 }
 
 .name { 
@@ -239,6 +249,11 @@ img{
   margin: 8px -16px;
 }
 
+  .gallery img:hover{
+	width: 100%;
+	opacity: .5;
+}
+
 
 .row,
 .row > .gallery {
@@ -267,46 +282,89 @@ img{
 
 footer{
 	grid-column: 1 / -1;
-	background-color: black;
-	color: white;
+	background-color: white;
+	color: black;
 	text-align: center;
+	font-size: 12px;
 }
 
-
-
-@media (min-width: 769px) {
-	.header,
-	.main-nav {
-		display: flex;
+@media (max-width: 1025px){
+	.parallax{
+		display:none;
 	}
-	.header {
+}
+
+@media (min-width: 600px){
+	.header,
+	.main-nav{
+		display:flex;
+	}
+
+	.header{
 		flex-direction: column;
 		align-items: center;
-    	.header{
-		width: 80%;
+		width:100%;
 		margin: 0 auto;
-		max-width: 1150px;
+/*		max-width: 1150px;*/
 	}
 
-.gallery {
-	grid-column: 1 / -1;
-	float: left;
-	width: 33%;
-	overflow: hidden;
-}
-.gallery img{
-	width: 100%;
-}
-
-
+	.gallery{
+		float: left;
+		width: 33%;
+		overflow: hidden;
 	}
 
+	.gallery img{
+		width: 100%;
+		opacity: 1.0;
+	}
+
+	#home {
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: auto auto auto;
 }
+
+#about{
+	grid-column: 2 / 3;
+	grid-row: 3;
+}
+
+.about-image{
+	grid-row: 1/ span 2;
+	grid-column: 1 / span 3;
+}
+
+.heading{
+	grid-column: 2 / 3;
+	grid-row: 1;
+}
+
+.heading h1{
+	background-color: rgba(255, 255, 255, .8);
+	border: 10px solid black;
+	padding: 30px;
+	align-self: center;
+	justify-self: center;
+	justify-content: center;
+	font-size: 1.5em;
+}
+
+#facts {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+}
+
+
+
+}
+
 
 @media (min-width: 1025px) {
 	.header {
 		flex-direction: row;
 		justify-content: space-between;
+		width: 100%;
 	}
 
 #home {
@@ -333,13 +391,27 @@ footer{
 }
 
 .parallax h1{
+	font-size: 4em;
+	padding-top: 250px;
 	color: #fff;
-	font-size: 3.5em;
-	padding-top: 300px;
 	font-weight: bold;
 	font-family: 'Montserrat';
 	text-shadow: 0 1px 0 #ccc, 0 2px 0 #c9c9c9, 0 3px 0 #bbb, 0 4px 0 #b9b9b9, 0 5px 0 #aaa, 0 6px 1px rgba(0,0,0,.1), 0 0 5px rgba(0,0,0,.1), 0 1px 3px rgba(0,0,0,.3), 0 3px 5px rgba(0,0,0,.2), 0 5px 10px rgba(0,0,0,.25), 0 10px 10px rgba(0,0,0,.2), 0 20px 20px rgba(0,0,0,.15);
 	text-align: center;
+	background-color: transparent;
+	border: none;
+	padding: none;
+	align-self: none;
+	justify-self: none;
+	justify-content: none;
+}
+
+.heading{
+	display: none;
+}
+
+.about-image{
+	display:none;
 }
 
 
@@ -348,6 +420,8 @@ footer{
 	width: 25%;
 	overflow: hidden;
 }
+
+
 /*end*/
 
 /*fun facts style*/
@@ -452,16 +526,34 @@ ol li::before {
   max-width: 500px;
   max-height: 400px;
   backface-visibility: hidden;
+
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-transition: 0.6s;
+  transition: 0.6s;
+  -webkit-transform-style: preserve-3d;
+  transform-style: preserve-3d;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .flip-card-front {
   color: black;
+
+  z-index: 2;
+  -webkit-transform: rotateY(0deg);
+         transform: rotateY(0deg);
 }
 
 .flip-card-back {
   background-color: black;
   color: white;
   transform: rotateY(180deg);
+
+   -webkit-transform: rotateY(-180deg);
+         transform: rotateY(-180deg);
+}
 }
 /*end flip cards*/
 
@@ -486,5 +578,31 @@ ol li::before {
   }
 
 
+
+
+/* contact form code inspired by https://freefrontend.com/css-contact-forms/ */
+
+/*Code inspired by W3schools*/
+}
+
+@media screen and (prefers-reduced-motion: reduce){
+  html{
+      scroll-behavior: auto; /* Removes scroll animation */
+  }
+
+  .skip a{
+    background: white;
+    left: 0;
+    padding: 6px;
+    position: absolute;
+    top: -40px;
+    -webkit-transition: none !important;
+    transition: none !important;
+    z-index: 1;
+  }
+
+  .skip a:focus{
+    top:0;
+  }
 }
 
