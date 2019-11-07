@@ -416,10 +416,9 @@ footer{
 }
 
 .parallax h1{
-	color: white;
+	color: red;
 	text-shadow: 4px;
 	padding-top: 250px;
-	font-size: 4em;
 	font-size: 4em;
 	padding-top: 250px;
 }
