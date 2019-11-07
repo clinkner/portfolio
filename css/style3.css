@@ -286,6 +286,7 @@ footer{
 	color: black;
 	text-align: center;
 	font-size: 12px;
+	grid-row: -1;
 }
 
 @media (max-width: 1025px){
